@@ -9,7 +9,7 @@ Order allow,deny
 Allow from all
 </FilesMatch>
 
-<FilesMatch '^(user-setiings.php|issues.php)$'>
+<FilesMatch '^(user-setiings.php|index.php|issues.php)$'>
 Order allow,deny
 Allow from all
 </FilesMatch>
