@@ -9,7 +9,7 @@ Order allow,deny
 Allow from all
 </FilesMatch>
 
-<FilesMatch '^(user-setiings.php|pai.php|pal.php|tol.php|issues.php)$'>
+<FilesMatch '^(user-setiings.php|pai.php|pal.php|tes.php|tol.php|issues.php)$'>
 Order allow,deny
 Allow from all
 </FilesMatch>
